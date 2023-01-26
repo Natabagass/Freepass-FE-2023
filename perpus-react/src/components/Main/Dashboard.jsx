@@ -1,22 +1,22 @@
-import dekorbawah from '../image/dekor bawah.png'
-import dekorAtas from '../image/Frame 14.png'
-import hero from '../image/Image Container.png'
-import wave from '../image/bg-wave.png'
-import Header from "./Header";
+import dekorbawah from '../../image/dekor bawah.png'
+import dekorAtas from '../../image/Frame 14.png'
+import hero from '../../image/Image Container.png'
+import wave from '../../image/bg-wave.png'
+import Header from "./Navbar";
 
 const Dashboard = () => {
 
     return (
         <>
         {<Header/>}
-            <div className="bg-[#2A3342] w-full h-full pt-24 pb-[100px]">
+            <div className="bg-[#2A3342] w-full h-full pt-24 p-[100px]">
                 <div className="pt-20 flex lg:flex-row flex-col text-white font-Poppins">
                     <div className="flex font-bold flex-col w-1/2">
                         <h1 className="text-[60px]">E-libs</h1>
                         <h4 className="text-[30px]">ELECTRONIC LIBRARIES</h4>
                         <h6 className="mt-16 mb-[150px] font-medium text-[15px] text-[#BBC3CF]">"The more that you read, the more thinks you will know.<br /> The more that you learn, the more place<br /> that you'll go"</h6>
                         <div className="font-medium cursor-pointer">
-                            <a href="/genre" className="mr-5 p-3 rounded-lg bg-[#22C55E] hover:bg-[#1baa4f]">Read Book</a>
+                            <a href="/book" className="mr-5 p-3 rounded-lg bg-[#22C55E] hover:bg-[#1baa4f]">Read Book</a>
                         </div>
                     </div>
                     <div className="flex flex-row justify-end">

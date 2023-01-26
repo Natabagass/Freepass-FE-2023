@@ -1,4 +1,4 @@
-import logo from '../image/logo atas.png'
+import logo from '../../image/logo atas.png'
 import axios from 'axios'
 import { useState } from 'react'
 
