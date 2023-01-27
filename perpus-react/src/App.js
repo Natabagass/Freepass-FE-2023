@@ -5,6 +5,8 @@ import Login from './components/Login/Login';
 import PrivateRoute from './routes/PrivateRoute';
 import Dashboard from './components/Main/Dashboard';
 import PageBook from './components/Main/PageBook'
+import BookDetails from './components/ViewBook/BookDetails';
+import ReadBook from './components/Main/ReadBook';
 
 function App() {
   return (
@@ -16,6 +18,7 @@ function App() {
       <Route element={<PrivateRoute />}>
         <Route path='/dashboard' element={<Dashboard />}></Route>
         <Route path='/book' element={<PageBook />}></Route>
+        <Route path='/book/:id' element={<ReadBook />}></Route>
       </Route>
     </Routes>
   );

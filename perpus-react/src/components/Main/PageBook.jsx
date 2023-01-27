@@ -4,8 +4,8 @@ import Navbar from "./Navbar";
 
 const PageBook = () => {
     return (
-        <div className="">
-            <div className="">
+        <div>
+            <div>
                 <Navbar />
                 <SearchForm />
                 <BookList />

@@ -17,8 +17,6 @@ const BookList = () => {
         }
     })
 
-    console.log(booksCover)
-
     if (loading) {
         return <Loader />
     }
@@ -29,7 +27,7 @@ const BookList = () => {
                 <div className="text-white font-bold px-16 text-[30px]">
                     <h2>{result}</h2>
                 </div>
-                <div className="p-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="p-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                     {
                         booksCover.slice(0, 30).map((data, index) => {
                             return (
@@ -38,7 +36,7 @@ const BookList = () => {
                         })
                     }
                 </div>
-                <div class="flex justify-end py-[50px] mx-[100px]">
+                <div className="flex justify-end py-[50px] mx-[100px]">
                     <a href="/dashboard" class="p-2 px-5 text-white rounded-lg bg-green-500 hover:bg-green-600">Back</a>
                 </div>
             </div>
