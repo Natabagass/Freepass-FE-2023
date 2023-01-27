@@ -4,10 +4,12 @@ import Navbar from "./Navbar";
 
 const PageBook = () => {
     return (
-        <div>
-            <Navbar/>
-            <SearchForm/>
-            <BookList/>
+        <div className="">
+            <div className="">
+                <Navbar />
+                <SearchForm />
+                <BookList />
+            </div>
         </div>
     );
 }
