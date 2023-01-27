@@ -37,7 +37,7 @@ const BookList = () => {
                     }
                 </div>
                 <div className="flex justify-end py-[50px] mx-[100px]">
-                    <a href="/dashboard" class="p-2 px-5 text-white rounded-lg bg-green-500 hover:bg-green-600">Back</a>
+                    <a href="/dashboard" class="py-3 px-4 text-white rounded-lg bg-green-500 hover:bg-green-600">Back</a>
                 </div>
             </div>
         </section>
