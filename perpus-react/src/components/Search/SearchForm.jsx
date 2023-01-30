@@ -25,7 +25,7 @@ const SearchForm = () => {
     return (
         <>
             <div className="mb-[50px]">
-                <h1 className="vsm:text-[40px] text-[30px] mt-[100px] text-white font-bold text-center">Find Your Book</h1>
+                <h1 className="vsm:text-[40px] text-[30px] pt-[100px] text-white font-bold text-center">Find Your Book</h1>
                 <form onSubmit={handleSubmit} className="flex items-center mt-[20px] justify-center">
                     <div className="relative gap-5">
                         <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">

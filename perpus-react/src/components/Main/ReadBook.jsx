@@ -4,8 +4,10 @@ import Navbar from "./Navbar";
 const ReadBook = () => {
     return (
         <>
-            <Navbar />
-            <BookDetails />
+            <body className="bg-[#2A3342] h-full">
+                <Navbar />
+                <BookDetails />
+            </body>
         </>
     );
 }

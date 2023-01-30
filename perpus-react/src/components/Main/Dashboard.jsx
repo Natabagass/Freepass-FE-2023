@@ -9,7 +9,7 @@ const Dashboard = () => {
     return (
         <>
         {<Header/>}
-            <div className="bg-[#2A3342] w-full h-full pt-24 p-[100px]">
+            <div className="bg-[#2A3342] w-full pt-24 p-[100px]">
                 <div className="pt-20 flex lg:flex-row flex-col text-white font-Poppins">
                     <div className="flex font-bold flex-col w-1/2">
                         <h1 className="text-[60px]">E-libs</h1>

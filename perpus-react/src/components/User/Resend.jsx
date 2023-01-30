@@ -1,0 +1,59 @@
+import axios from "axios";
+import { useState } from "react";
+import logo from '../../image/logo atas.png'
+import { Navigate, useNavigate } from "react-router-dom";
+
+const Resend = () => {
+    const [email, setEmail] = useState(false)
+    const [error, setError] = useState("")
+    const navigate = useNavigate()
+
+    const sendCode = async () => {
+        await axios.post('https://tcah-angon.ruangbaca-fisipedu.my.id/api/resend-email',{
+            email: email
+        }).then(res => {
+            console.log(res)
+            navigate('/aktivasi')
+        }).catch(err => {
+            console.log(err)
+            setError(err.response.data)
+        })
+    }
+
+    return (
+        <div>
+            <div className="flex justify-center h-screen items-center">
+                <div className="flex h-fit justify-center">
+                    <img className="absolute w-[40px] vsm:w-[46px] lg:w-[52px] xl:w-[64px] -mt-[20px] lg:-mt-[30px] xl:-mt-[40px]" src={logo} alt="" />
+                    <div className="flex flex-col py-[50px] w-[600px] bg-gray-100 border shadow-sm rounded-lg px-[30px] vsm:px-[40px] sm:px-[80px] xl:px-[100px] ">
+                        <div className="flex flex-col items-center">
+                            <h1 className="xl:text-[30px] text-[24px] font-bold">Resend Code</h1>
+                        </div>
+                        <div className="flex justify-center flex-col">
+                            <label className="mt-10 text-[14px] lg:text-[16px] text-[#333F51] font-bold">Email</label>
+                            <input
+                                type="text"
+                                onChange={e => setEmail(e.target.value)}
+                                required
+                                className="w-full rounded-md shadow-md outline-none focus:ring-2 focus:ring-blue-500 mt-2 p-3 placeholder:text-[14px] placeholder:-pl-[600px]"
+                                placeholder="Enter your email adress" />
+                            <label>
+                                <span className="mt-2 text-red-500 text-[14px]">{error?.message}</span>
+                            </label>
+
+                            <button
+                                type="submit"
+                                onClick={sendCode}
+                                className="bg-[#22C55E] p-2 xl:p-3 mt-9 rounded-lg w-full text-white hover:bg-[#1eae53]">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="flex justify-end mx-[350px] -mt-[100px] mb-10">
+                <a href='/aktivasi' className="py-3 px-4 text-white rounded-lg bg-green-500 hover:bg-green-600">Back</a>
+            </div>
+        </div>
+    );
+}
+
+export default Resend;
