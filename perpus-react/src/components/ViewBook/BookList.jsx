@@ -1,8 +1,6 @@
 import { useContext } from "react";
 import { DataContext } from "../Data/Data";
-import Header from "../Main/Navbar";
 import Loader from "../Loader/Loader";
-import SearchForm from "../Search/SearchForm";
 import Book from "../ViewBook/Book"
 import notFound from "../../image/cover_not_found.jpg"
 

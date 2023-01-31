@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import logo from '../../image/logo atas.png'
+import Swal from 'sweetalert2'
 
 
 const Aktivasi = () => {
@@ -17,11 +18,21 @@ const Aktivasi = () => {
             email: data.email,
             activation_code: data.activation_code
         }).then(res => {
-            console.log(res)
             navigate('/')
+            Swal.fire({
+                title: 'Aktivasi Berhasil',
+                text: 'Silahkan Login',
+                icon: 'success',
+                confirmButtonText: 'Oke!'
+            })
         }).catch(err => {
-            console.log(err)
             setError(err.response.data)
+            Swal.fire({
+                title: 'Aktivasi Gagal',
+                text: 'Silahkan Masukkan Ulang',
+                icon: 'error',
+                confirmButtonText: 'Oke!'
+            })
         })
     }
 

@@ -1,8 +1,7 @@
 import logo from '../../image/Logo-Elibs.png'
-import logo2 from '../../image/Logo-E-Libs-White.png'
-import { Link } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 import { useState } from 'react';
+import Swal from 'sweetalert2'
 
 const Navbar = () => {
     const [toggle, setToggle] = useState(false);
@@ -10,6 +9,12 @@ const Navbar = () => {
     const logout = () => {
         localStorage.removeItem('auth');
         navigate('/')
+        Swal.fire({
+            title: 'Logout Berhasil',
+            text: 'Anda Berhasil Logout',
+            icon: 'success',
+            confirmButtonText: 'Cool'
+        })
     }
 
     return (

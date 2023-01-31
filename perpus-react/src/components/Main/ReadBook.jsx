@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 const ReadBook = () => {
     return (
         <>
-            <body className="bg-[#2A3342] h-full">
+            <body>
                 <Navbar />
                 <BookDetails />
             </body>

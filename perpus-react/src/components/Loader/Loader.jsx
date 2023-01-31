@@ -1,5 +1,3 @@
-import SearchForm from "../Search/SearchForm";
-
 const Loader = () => {
     return (
         <>

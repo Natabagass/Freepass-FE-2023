@@ -27,7 +27,7 @@ const Dashboard = () => {
                     </div>
                 </div>
             </div>
-            <img className="w-full mb-[20px]" src={wave} alt=""></img>
+            <img className="w-full mb-[20px]" src={wave} alt="bawah"></img>
         </>
     );
 }

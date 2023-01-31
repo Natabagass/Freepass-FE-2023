@@ -1,6 +1,7 @@
 import logo from '../../image/logo atas.png'
 import axios from 'axios'
 import { useState } from 'react'
+import Swal from 'sweetalert2'
 
 const Login = () => {
     const [serverError, setServerError] = useState("");
@@ -21,9 +22,21 @@ const Login = () => {
                 console.log(response)
                 localStorage.setItem('auth', response.data.token)
                 window.location.reload();
+                Swal.fire({
+                    title: 'Login Berhasil',
+                    text: 'Anda Berhasil Login',
+                    icon: 'success',
+                    confirmButtonText: 'Oke!'
+                })
             }).catch(err => {
                 console.log(err)
                 setServerError(err.response.data)
+                Swal.fire({
+                    title: 'Login Gagal',
+                    text: 'Silahkan Anda Login Ulang',
+                    icon: 'error',
+                    confirmButtonText: 'Oke!'
+                })
             })
     }
 

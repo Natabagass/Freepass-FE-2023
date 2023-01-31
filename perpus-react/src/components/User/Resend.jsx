@@ -1,7 +1,8 @@
 import axios from "axios";
 import { useState } from "react";
 import logo from '../../image/logo atas.png'
-import { Navigate, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
+import Swal from 'sweetalert2'
 
 const Resend = () => {
     const [email, setEmail] = useState(false)
@@ -12,11 +13,21 @@ const Resend = () => {
         await axios.post('https://tcah-angon.ruangbaca-fisipedu.my.id/api/resend-email', {
             email: email
         }).then(res => {
-            console.log(res)
+            Swal.fire({
+                title: 'Resend Code Berhasil',
+                text: 'Silahkan Anda Memasukkan Nomor Aktivasi',
+                icon: 'success',
+                confirmButtonText: 'Oke!'
+            })
             navigate('/aktivasi')
         }).catch(err => {
-            console.log(err)
             setError(err.response.data)
+            Swal.fire({
+                title: 'Resend Code Gagal',
+                text: 'Silahkan Anda Memasukkan Email Ulang',
+                icon: 'error',
+                confirmButtonText: 'Oke!'
+            })
         })
     }
 
