@@ -4,11 +4,11 @@ import Navbar from "./Navbar";
 
 const PageBook = () => {
     return (
-        <body className="bg-[#2A3342] h-full">
+        <div className="bg-[#2A3342] h-full">
             <Navbar />
             <SearchForm />
             <BookList />
-        </body>
+        </div>
     );
 }
 

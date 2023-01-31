@@ -2,6 +2,7 @@ import axios from "axios"
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import foto from "../../image/card.png"
+import Swal from 'sweetalert2'
 
 const Register = () => {
     const navigate = useNavigate()
@@ -32,9 +33,21 @@ const Register = () => {
             .then(response => {
                 console.log(response)
                 navigate('/aktivasi')
+                Swal.fire({
+                    title: 'Registrasi Berhasil',
+                    text: 'Silahkan Anda Memasukkan Nomor Aktivasi',
+                    icon: 'success',
+                    confirmButtonText: 'Oke!'
+                })
             }).catch(err => {
                 console.log(err)
                 setError(err.response.data)
+                Swal.fire({
+                    title: 'Registrasi Gagal',
+                    text: 'Silahkan Anda Masukkan Ulang',
+                    icon: 'error',
+                    confirmButtonText: 'Oke!'
+                })
                 console.log(error)
             })
     }

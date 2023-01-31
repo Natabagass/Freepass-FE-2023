@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 
+
 const Book = (book) => {
-    console.log(book.cover_img)
     return (
         <div className="flex px-12 py-12 m-3 bg-white shadow-lg rounded-xl hover:-translate-y-3 transition hover:shadow-lg hover:shadow-gray-500 flex-col">
             <div className='book-item-img max-w-[180px] mx-auto flex justify-center'>

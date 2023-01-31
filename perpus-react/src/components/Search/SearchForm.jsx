@@ -1,7 +1,7 @@
 import { useContext, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { DataContext } from "../Data/Data";
-import Header from "../Main/Navbar";
+
 
 const SearchForm = () => {
     const {setSearch, setResult} = useContext(DataContext)

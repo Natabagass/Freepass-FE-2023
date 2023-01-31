@@ -9,6 +9,7 @@ import ReadBook from './components/Main/ReadBook';
 import Register from './components/User/Register';
 import Aktivasi from './components/User/Aktivasi';
 import Resend from './components/User/Resend';
+import Profile from './components/User/Profile';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
 
       <Route element={<PrivateRoute />}>
         <Route path='/dashboard' element={<Dashboard />}></Route>
+        <Route path='/profile' element={<Profile />}></Route>
         <Route path='/book' element={<PageBook />}></Route>
         <Route path='/book/:id' element={<ReadBook />}></Route>
       </Route>
