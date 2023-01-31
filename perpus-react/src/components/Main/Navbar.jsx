@@ -13,7 +13,7 @@ const Navbar = () => {
             title: 'Logout Berhasil',
             text: 'Anda Berhasil Logout',
             icon: 'success',
-            confirmButtonText: 'Cool'
+            confirmButtonText: 'Oke!'
         })
     }
 
