@@ -20,14 +20,14 @@ const Login = () => {
             })
             .then(response => {
                 console.log(response)
-                localStorage.setItem('auth', response.data.token)
-                window.location.reload();
                 Swal.fire({
                     title: 'Login Berhasil',
                     text: 'Anda Berhasil Login',
                     icon: 'success',
                     confirmButtonText: 'Oke!'
                 })
+                localStorage.setItem('auth', response.data.token)
+                window.location.reload();
             }).catch(err => {
                 console.log(err)
                 setServerError(err.response.data)
