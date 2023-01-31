@@ -30,9 +30,10 @@ const Aktivasi = () => {
             <div className="flex justify-center h-screen items-center">
                 <div className="flex h-fit justify-center">
                     <img className="absolute w-[40px] vsm:w-[46px] lg:w-[52px] xl:w-[64px] -mt-[20px] lg:-mt-[30px] xl:-mt-[40px]" src={logo} alt="" />
-                    <div className="flex flex-col py-[50px] bg-gray-100 border shadow-sm rounded-lg px-[30px] vsm:px-[40px] sm:px-[80px] xl:px-[100px] ">
+                    <div className="flex w-[350px] vsm:w-[400px] sm:w-[550px] md:w-[700px] flex-col py-[50px] bg-gray-100 border shadow-sm rounded-lg px-[20px] sm:px-[50px] md:px-[100px] ">
                         <div className="flex flex-col items-center">
-                            <h1 className="xl:text-[30px] text-[24px] font-bold">Enter your Email and Verification Number</h1>
+                            <h1 className="xl:text-[30px] text-[24px] font-bold">Enter your Email and </h1>
+                            <span className="xl:text-[30px] text-[24px] font-bold"> Verification Number</span>
                         </div>
                         <div className="flex justify-center flex-col">
                             <label className="mt-10 text-[14px] lg:text-[16px] text-[#333F51] font-bold">Email</label>
