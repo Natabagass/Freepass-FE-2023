@@ -1,6 +1,13 @@
 # Getting Started with Create React App
 
+
+
+
 Pakai Email yang bisa diakses yaa supaya kode aktivasi dari api masuk buat aktivasi akun!! Terimakasihhh
+
+
+
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
