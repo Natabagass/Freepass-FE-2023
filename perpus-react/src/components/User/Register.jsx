@@ -48,7 +48,6 @@ const Register = () => {
                     icon: 'error',
                     confirmButtonText: 'Oke!'
                 })
-                console.log(error)
             })
     }
 
